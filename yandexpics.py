@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 from fake_headers import Headers
 import os, requests, json
@@ -13,7 +15,7 @@ class YandexImagesSearch:
         self.clean = None
 
     def _print_ok(self):
-        print(f'page {self.k} - {self.pics_divs.index(self.item)} OK')
+        print(f'Страница: {self.k} Изображение {self.pics_divs.index(self.item)} Сохранено')
 
     def _look_save_pics(self):
         try:
@@ -66,13 +68,13 @@ class YandexImagesSearch:
                     self.clean = json_data['serp-item']['preview'][0]['url']
                 except KeyError:
                     continue
-                if self.clean[-3:] in ['jpg', 'png', 'peg', 'gif', 'svg', 'ebp']:
+                if self.clean[-3:] in ['jpg']:
                     self._look_save_pics()
                 else:
                     try:
                         self.clean = json_data['serp-item']['preview'][0]['origin']['url']
                     except KeyError:
                         continue
-                    if self.clean[-3:] in ['jpg', 'png', 'peg', 'gif', 'svg', 'ebp']:
+                    if self.clean[-3:] in ['jpg']:
                         self._look_save_pics()
                         

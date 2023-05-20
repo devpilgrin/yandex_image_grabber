@@ -1,8 +1,7 @@
 # -*- coding: cp1251 -*-
 from PIL import Image
-import requests, mimetypes, os, json
-from fake_headers import Headers
-from bs4 import BeautifulSoup as bs4
+import requests, mimetypes
+
 
 def resize_image(input_image_path,
                  output_image_path,

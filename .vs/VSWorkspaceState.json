@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\env\\Lib\\site-packages"
   ],
-  "SelectedNode": "\\C:\\Users\\Roman\\Source\\yandex_image_grabber",
+  "SelectedNode": "\\main.py",
   "PreviewInSolutionExplorer": false
 }
